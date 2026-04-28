@@ -1,7 +1,7 @@
-package com.AutoServix.AutoServix.service;
+package com.AutoServix.service;
 
-import com.AutoServix.AutoServix.models.Mechanic;
-import com.AutoServix.AutoServix.repository.MechanicRepository;
+import com.AutoServix.models.Mechanic;
+import com.AutoServix.repository.MechanicRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,12 +26,12 @@ public class MechanicService {
         return repo.findByMechName(name);
     }
 
-    public List<Mechanic> getByUserName(String userName) {
-        return repo.findByUserUserName(userName);
+    public List<Mechanic> getByCustomerName(String customerName) {
+        return repo.findByCustomerName(customerName);
     }
 
-    public List<Mechanic> getByUserId(Integer userId) {
-        return repo.findByUserUserId(userId);
+    public List<Mechanic> getByCustomerId(Integer customerId) {
+        return repo.findByCustomerId(customerId);
     }
 
     public Mechanic addMechanic(Mechanic mechanic) {

@@ -1,9 +1,9 @@
-package com.AutoServix.AutoServix.controller;
+package com.AutoServix.controller;
 
-import com.AutoServix.AutoServix.DTO.AuthResponse;
-import com.AutoServix.AutoServix.DTO.LoginRequest;
-import com.AutoServix.AutoServix.DTO.RegisterRequest;
-import com.AutoServix.AutoServix.Services.AuthService;
+import com.AutoServix.dto.AuthResponse;
+import com.AutoServix.dto.LoginRequest;
+import com.AutoServix.dto.RegisterRequest;
+import com.AutoServix.service.AuthService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

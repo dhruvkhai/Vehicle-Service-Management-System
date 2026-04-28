@@ -1,4 +1,4 @@
-package com.AutoServix.AutoServix.Config;
+package com.AutoServix.Config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

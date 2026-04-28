@@ -1,14 +1,15 @@
-package com.AutoServix.AutoServix.service;
+package com.AutoServix.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.AutoServix.AutoServix.models.Vendor;
-import com.AutoServix.AutoServix.repository.VendorRepository;
+import com.AutoServix.models.Vendor;
+import com.AutoServix.repository.VendorRepository;
 
+import org.springframework.stereotype.Service;
 
-
+@Service
 public class VendorService {
 
     @Autowired
@@ -19,17 +20,14 @@ public class VendorService {
     }
 
     public List<Vendor> Getalluser(Integer Customer_Id){
-        return vendorRepo.findbyCustomer_Id();
-
+        return vendorRepo.findByCustomerId(Customer_Id);
     }
     public List<Vendor> getServiceById(Integer Service_Id){
-        return vendorRepo.findbyService_Id();
-
+        return vendorRepo.findByServiceid(Service_Id);
     }
 
     public List<Vendor> Getallmechicalids (Integer Mechanical_Id){
-        return vendorRepo.findbyMechanical_Id();
-
+        return vendorRepo.findByMechanicMechId(Mechanical_Id);
     }
 
     public List<Vendor> getAllServices() {
@@ -38,16 +36,14 @@ public class VendorService {
     }
 
     public List<Vendor> getByCustomerId(Integer id) {
-
-        return vendorRepo.findbyCustomer_Id();
+        return vendorRepo.findByCustomerId(id);
     }
 
     public List<Vendor> getByServiceId(Integer id) {
-
-        return vendorRepo.findbyService_Id();
+        return vendorRepo.findByServiceid(id);
     }
 
     public  List<Vendor> getByMechanicId( Integer id) {
-        return vendorRepo.findbyMechanical_Id();
+        return vendorRepo.findByMechanicMechId(id);
     }
 }

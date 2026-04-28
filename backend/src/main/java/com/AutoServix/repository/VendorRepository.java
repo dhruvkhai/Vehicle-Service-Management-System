@@ -1,18 +1,18 @@
-package com.AutoServix.AutoServix.repository;
+package com.AutoServix.repository;
 
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.AutoServix.AutoServix.models.Vendor;
+import com.AutoServix.models.Vendor;
 
 public interface VendorRepository extends JpaRepository<Vendor , Integer> {
 
-    List<Vendor> findbyMechanical_Id();
+    List<Vendor> findByMechanicMechId(Integer mechanicId);
 
-    List<Vendor> findbyService_Id();
+    List<Vendor> findByServiceid(Integer serviceid);
 
-    List<Vendor> findbyCustomer_Id();
+    List<Vendor> findByCustomerId(Integer customerId);
 
     List<Vendor> findAll();
 

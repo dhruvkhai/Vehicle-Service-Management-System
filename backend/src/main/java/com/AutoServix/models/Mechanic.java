@@ -1,12 +1,14 @@
-package com.AutoServix.AutoServix.models;
+package com.AutoServix.models;
 
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "mechanic")
 public class Mechanic {
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer mechId;
 
@@ -15,8 +17,8 @@ public class Mechanic {
     private String mechDescription;
 
     @ManyToOne
-    @JoinColumn(name = "user_Id")  // its a foreign key
-    private User user;   // class is not imported yet
+    @JoinColumn(name = "customer_Id")  // its a foreign key
+    private Customer customer;
 
     @ElementCollection
     @CollectionTable(name = "mechanic_faults", joinColumns = @JoinColumn(name = "mech_id"))
@@ -26,10 +28,10 @@ public class Mechanic {
 
     public Mechanic() {}
 
-    public Mechanic(String mechName, String mechDescription, User user,  ArrayList<String> fault, int noOfServices) {
+    public Mechanic(String mechName, String mechDescription, Customer customer,  ArrayList<String> fault, int noOfServices) {
         this.mechName = mechName;
         this.mechDescription = mechDescription;
-        this.user = user;
+        this.customer = customer;
         this.fault = fault;
         this.noOfServices = noOfServices;
     }
@@ -43,13 +45,12 @@ public class Mechanic {
     public String getMechDescription() { return mechDescription; }
     public void setMechDescription(String mechDescription) { this.mechDescription = mechDescription; }
 
-    public User getUser() { return user; }
-    public void setUser(User user) { this.user = user; }
+    public Customer getCustomer() { return customer; }
+    public void setCustomer(Customer customer) { this.customer = customer; }
 
     public List<String> getFault() { return fault; }
     public void setFault(List<String> fault) { this.fault = fault; }
 
     public int getNoOfServices() { return noOfServices; }
     public void setNoOfServices(int noOfServices) { this.noOfServices = noOfServices; }
-}
 }

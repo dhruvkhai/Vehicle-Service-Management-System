@@ -1,4 +1,4 @@
-package com.AutoServix.AutoServix.models;
+package com.AutoServix.models;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;

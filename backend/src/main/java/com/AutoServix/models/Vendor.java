@@ -1,4 +1,4 @@
-package com.AutoServix.AutoServix.models;
+package com.AutoServix.models;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -17,14 +17,13 @@ public class Vendor {
 
     @ManyToOne
     @JoinColumn(name="Customer_Id", nullable=false)
-
-    private Integer customerid;
+    private Customer customer;
     private String AISummary;
     private Integer Health;
 
     @ManyToOne
     @JoinColumn(name="Mechanic_Id", nullable=false)
-    private Integer Mechanic_Id;
+    private Mechanic mechanic;
 
     public Integer getServiceid() {
         return serviceid;
@@ -35,12 +34,12 @@ public class Vendor {
         this.serviceid = serviceid;
     }
 
-    public Integer getCustomerid() {
-        return customerid;
+    public Customer getCustomer() {
+        return customer;
     }
 
-    public void setCustomerid(Integer customerid) {
-        this.customerid = customerid;
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
     }
 
     public String getAISummary() {
@@ -59,12 +58,12 @@ public class Vendor {
         Health = health;
     }
 
-    public Integer getMechanic_Id() {
-        return Mechanic_Id;
+    public Mechanic getMechanic() {
+        return mechanic;
     }
 
-    public void setMechanic_Id(Integer mechanic_Id) {
-        Mechanic_Id = mechanic_Id;
+    public void setMechanic(Mechanic mechanic) {
+        this.mechanic = mechanic;
     }
 
 

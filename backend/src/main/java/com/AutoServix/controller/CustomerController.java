@@ -1,7 +1,7 @@
-package com.AutoServix.AutoServix.controller;
+package com.AutoServix.controller;
 
-import com.AutoServix.AutoServix.models.Customer;
-import com.AutoServix.AutoServix.service.CustomerService;
+import com.AutoServix.models.Customer;
+import com.AutoServix.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

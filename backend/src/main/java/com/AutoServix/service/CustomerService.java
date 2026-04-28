@@ -1,7 +1,7 @@
-package com.AutoServix.AutoServix.service;
+package com.AutoServix.service;
 
-import com.AutoServix.AutoServix.models.Customer;
-import com.AutoServix.AutoServix.repository.CustomerRepository;
+import com.AutoServix.models.Customer;
+import com.AutoServix.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

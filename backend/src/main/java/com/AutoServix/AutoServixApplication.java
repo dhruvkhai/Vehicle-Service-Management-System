@@ -1,4 +1,4 @@
-package com.AutoServix.AutoServix;
+package com.AutoServix;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

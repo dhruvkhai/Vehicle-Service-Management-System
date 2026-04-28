@@ -1,10 +1,10 @@
-package com.AutoServix.AutoServix.service;
+package com.AutoServix.service;
 
-import com.AutoServix.AutoServix.DTO.AuthResponse;
-import com.AutoServix.AutoServix.DTO.LoginRequest;
-import com.AutoServix.AutoServix.DTO.RegisterRequest;
-import com.AutoServix.AutoServix.Models.CustomerModel;
-import com.AutoServix.AutoServix.Repository.CustomerRepo;
+import com.AutoServix.dto.AuthResponse;
+import com.AutoServix.dto.LoginRequest;
+import com.AutoServix.dto.RegisterRequest;
+import com.AutoServix.models.Customer;
+import com.AutoServix.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 public class AuthService {
 
     @Autowired
-    private CustomerRepo customerRepo;
+    private CustomerRepository customerRepo;
 
     @Autowired
     private PasswordEncoder passwordEncoder;
@@ -25,7 +25,7 @@ public class AuthService {
 
         String encodedpassword = passwordEncoder.encode(request.getPassword());
 
-        CustomerModel customer = new CustomerModel(
+        Customer customer = new Customer(
                 request.getName(),
                 request.getEmail(),
                 encodedpassword,
@@ -40,7 +40,7 @@ public class AuthService {
     }
 
     public AuthResponse login(LoginRequest request) {
-        CustomerModel customer = customerRepo.findByEmail(request.getEmail())
+        Customer customer = customerRepo.findByEmail(request.getEmail())
                 .orElseThrow(() -> new RuntimeException("User Not Found"));
 
         if (!passwordEncoder.matches(request.getPassword(), customer.getPassword())) {

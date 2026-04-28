@@ -1,10 +1,10 @@
-package com.AutoServix.AutoServix.controller;
+package com.AutoServix.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.AutoServix.AutoServix.models.Vendor;
-import com.AutoServix.AutoServix.service.VendorService;
+import com.AutoServix.models.Vendor;
+import com.AutoServix.service.VendorService;
 
 import java.util.List;
 

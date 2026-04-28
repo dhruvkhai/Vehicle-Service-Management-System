@@ -1,4 +1,4 @@
-package com.AutoServix.AutoServix.controller;
+package com.AutoServix.controller;
 
 public class AdminController {
 }

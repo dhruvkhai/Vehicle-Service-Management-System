@@ -1,4 +1,4 @@
-package com.AutoServix.AutoServix.service;
+package com.AutoServix.service;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

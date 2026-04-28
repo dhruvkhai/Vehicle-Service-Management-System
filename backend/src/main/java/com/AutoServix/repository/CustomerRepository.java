@@ -1,6 +1,6 @@
-package com.AutoServix.AutoServix.repository;
+package com.AutoServix.repository;
 
-import com.AutoServix.AutoServix.models.Customer;
+import com.AutoServix.models.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

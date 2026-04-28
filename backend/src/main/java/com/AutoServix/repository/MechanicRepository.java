@@ -1,6 +1,6 @@
-package com.AutoServix.AutoServix.repository;
+package com.AutoServix.repository;
 
-import com.AutoServix.AutoServix.models.Mechanic;
+import com.AutoServix.models.Mechanic;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
@@ -8,7 +8,7 @@ import java.util.List;
 public interface MechanicRepository extends JpaRepository<Mechanic, Integer> {
     List<Mechanic> findByMechName(String mechName);
 
-    List<Mechanic> findByUserUserName(String userName);
+    List<Mechanic> findByCustomerName(String customerName);
 
-    List<Mechanic> findByUserUserId(Integer userId);
+    List<Mechanic> findByCustomerId(Integer customerId);
 }

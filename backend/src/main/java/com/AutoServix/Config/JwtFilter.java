@@ -1,6 +1,6 @@
-package com.AutoServix.AutoServix.Config;
+package com.AutoServix.Config;
 
-import com.AutoServix.AutoServix.Services.Jwtservice;
+import com.AutoServix.service.Jwtservice;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import org.springframework.beans.factory.annotation.Autowired;

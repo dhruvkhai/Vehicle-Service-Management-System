@@ -1,7 +1,7 @@
-package com.AutoServix.AutoServix.controller;
+package com.AutoServix.controller;
 
-import com.AutoServix.AutoServix.models.Mechanic;
-import com.AutoServix.AutoServix.service.MechanicService;
+import com.AutoServix.models.Mechanic;
+import com.AutoServix.service.MechanicService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -30,14 +30,14 @@ public class MechanicController {
         return ResponseEntity.ok(serv.getbyName(mechName));
     }
 
-    @GetMapping("/username/{userName}")
-    public ResponseEntity<List<Mechanic>> getByUserName(@PathVariable String userName) {
-        return ResponseEntity.ok(serv.getByUserName(userName));
+    @GetMapping("/customername/{customerName}")
+    public ResponseEntity<List<Mechanic>> getByCustomerName(@PathVariable String customerName) {
+        return ResponseEntity.ok(serv.getByCustomerName(customerName));
     }
 
-    @GetMapping("/user/{userId}")
-    public ResponseEntity<List<Mechanic>> getByUserId(@PathVariable Integer userId) {
-        return ResponseEntity.ok(serv.getByUserId(userId));
+    @GetMapping("/customer/{customerId}")
+    public ResponseEntity<List<Mechanic>> getByCustomerId(@PathVariable Integer customerId) {
+        return ResponseEntity.ok(serv.getByCustomerId(customerId));
     }
 
     @PostMapping("/add")

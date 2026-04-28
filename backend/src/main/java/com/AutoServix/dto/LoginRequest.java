@@ -1,4 +1,4 @@
-package com.AutoServix.AutoServix.dto;
+package com.AutoServix.dto;
 
 public class LoginRequest {
 
